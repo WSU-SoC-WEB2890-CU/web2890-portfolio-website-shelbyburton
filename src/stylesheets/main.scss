@@ -3,7 +3,6 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 //COLOR SCHEME
-
 /*TEAL & BLUE*/
 $teal-dark: #025159;
 $teal: #3e848c;
@@ -20,17 +19,25 @@ $grey-dark: #242526;
 $grey-blue: #344665;
 $black: #000000;
 
-//BODY
+//BODY & HEADER TAGS
 body {
-  background-color: $white;
-  font-family: Helvetica, Arial, sans-serif;
+background-color: $white;
+font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4 {
+font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-size: 1.2rem; 
 }
 
 //NAVBAR
 .menu {
   font-size: 1.4rem;
-  margin-top: 50px;
-  height: 250px;
+  margin-top: 50px; 
+  font-family: 'Raleway', sans-serif;
 
   @include media-breakpoint-up(sm) {
     font-size: 1.2rem;
@@ -40,18 +47,41 @@ body {
     font-size: 1.3rem;
   }
 
+  .navbar-toggler-icon {
+    border-color: $grey-light;
+
+    i {
+      color: $copper;
+      font-size: 2.2rem;
+    }
+  }
+
   .navbar-brand {
     color: $copper;
     font-size: 2.4rem;
     font-weight: 700;
     margin-left: 40px;
-    border: none;
   }
+
   .dropdown-menu {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: $copper;
+    }
+
+    &:active {
+      color: $copper;
+    }
   }
+
+  .dropdown-menu:hover {
+    color: $copper;
+  }
+
   li {
-    padding: 0 0.7rem;
+    padding: 0 0.4rem;
+    margin-right: 40px;
 
     a {
       color: $black;
@@ -62,15 +92,10 @@ body {
       &:hover {
         color: $copper;
       }
+
       &:active {
         color: $copper;
       }
-    }
-  }
-  .navbar-toggler-icon {
-    i {
-      color: $copper;
-      font-size: 2.2rem;
     }
   }
 }
@@ -81,19 +106,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 1500px;
+  margin-bottom: 100px;
 }
 
+ 
 //TIMELINE
-.page-header {
-  h1 {
-    background-color: $teal-dark;
-    width: 600px;
-    height: 100px;
-    margin-bottom: 100px;
-    font-size: 1.6rem;
-    margin-top: 60px;
-    text-align: center;
-  }
+#timeline {
+  margin-top: 20px;
 }
 
 .timeline {
@@ -112,6 +131,7 @@ body {
 .timeline-body {
   font-size: 1.2rem;
 }
+
 .timeline:before {
   top: 0;
   bottom: 0;
@@ -122,26 +142,32 @@ body {
   left: 50%;
   margin-left: -1.5px;
 }
+
 .timeline > li {
   margin-bottom: 20px;
   position: relative;
 }
+
 .timeline > li:before,
 .timeline > li:after {
   content: " ";
   display: table;
 }
+
 .timeline > li:after {
   clear: both;
 }
+
 .timeline > li:before,
 .timeline > li:after {
   content: " ";
   display: table;
 }
+
 .timeline > li:after {
   clear: both;
 }
+
 .timeline > li > .timeline-panel {
   width: 46%;
   float: left;
@@ -152,6 +178,7 @@ body {
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
+
 .timeline > li > .timeline-panel:before {
   position: absolute;
   top: 26px;
@@ -163,6 +190,7 @@ body {
   border-bottom: 15px solid transparent;
   content: " ";
 }
+
 .timeline > li > .timeline-panel:after {
   position: absolute;
   top: 27px;
@@ -174,6 +202,7 @@ body {
   border-bottom: 14px solid transparent;
   content: " ";
 }
+
 .timeline > li > .timeline-badge {
   color: #fff;
   width: 50px;
@@ -192,61 +221,136 @@ body {
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
 }
+
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
 }
+
 .timeline > li.timeline-inverted > .timeline-panel:before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
+
 .timeline > li.timeline-inverted > .timeline-panel:after {
   border-left-width: 0;
   border-right-width: 14px;
   left: -14px;
   right: auto;
 }
+
 .timeline-badge {
   background-color: $teal !important;
 }
+
 .timeline-title {
   margin-top: 0;
   color: inherit;
 }
+
 .timeline-body > p,
 .timeline-body > ul {
   margin-bottom: 0;
 }
+
 .timeline-body > p + p {
   margin-top: 5px;
 }
 
-//ABOUT
-.about {
+
+//PROJECT & ABOUT ME CARDS
+.card {
+  border-radius: .5rem;
+}
+
+//PORTFOLIO 
+.project, .web_1430, .web_2630, .web_2890 {
   p {
-    font-size: 2rem;
+    font-size: 1.4rem; 
+  };
+}
+
+
+//ABOUT ME
+.heading-line::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: $grey-blue;
+}
+
+.heading-line::after {
+  content: "";
+  width: 2rem;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: $grey-blue;
+}
+
+.display-3 {
+  &--title {
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    background-image: linear-gradient(to right, $teal-dark, $teal-light);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.8rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.4rem;
+    }
   }
-  button {
-    border: 5px solid $teal;
-    font-size: 1.4rem;
-    width: 420px;
-    a {
-      text-decoration: none;
-      color: $grey;
-      &:hover {
-        color: $copper;
-      }
+}
+
+
+//ABOUT CAROUSEL
+.about {
+  position: relative;
+  padding: 0;
+
+  &__card {
+    padding: 2rem 1.25rem;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    &__picture {
+      border-radius: 0.5rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
-  p {
-    font-size: 1.4rem;
-  }
-  h1 {
-    i {
-      font-size: .8em;
-      color: $teal;
+  &__name {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+
+    h3 {
+      padding-top: 0.8rem;
+      text-transform: capitalize;
+    }
+
+    p {
+      padding-bottom: 2rem;
+      text-transform: capitalize;
+      font-size: 1.2rem; 
     }
   }
 }
@@ -256,17 +360,26 @@ body {
   button {
     background-color: $teal-light;
     border: none;
+
+    i {
+      font-size: 1.2rem;
+      color: $white;
+      padding: 0 0.4rem;
+    }
   }
+
   i {
     font-size: 1.3rem;
-    color: $white;
+    color: $grey-blue;
     padding: 0 0.4rem;
   }
+
   .links-list {
     display: inline;
     list-style-type: none;
     position: relative;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 500; 
 
     li {
       margin-bottom: 0.5rem;
@@ -275,7 +388,7 @@ body {
       color: $teal;
 
       a {
-        color: $white;
+        color: $grey-dark;
         text-decoration: none;
 
         &:hover {
@@ -285,6 +398,7 @@ body {
     }
   }
 }
+
 //FOOTER
 .footer {
   background-color: $grey-light;
@@ -292,8 +406,9 @@ body {
   h5 {
     color: $grey;
   }
+
   i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $grey-blue;
     padding: 0 0.4rem;
   }
@@ -308,8 +423,8 @@ body {
   li {
     margin-bottom: 0.5rem;
     text-decoration: none;
-    font-size: 1.4rem;
-    color: $teal;
+    font-size: 1.3rem;
+    color: $black;
 
     a {
       color: $black;
@@ -322,7 +437,7 @@ body {
   }
 }
 
-// STYLE THE COPYRIGHT  CONTENT
+//COPYRIGHT  CONTENT
 .footer-bottom {
   background-color: $grey-dark;
   font-size: 1.2rem;
@@ -350,7 +465,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-// STYLE THE BACK TO TOP BUTTON
+//BACK TO TOP BUTTON
 .back-to-top {
   background-color: $teal-dark;
   position: fixed;
@@ -363,6 +478,7 @@ body {
   &:hover {
     background-color: $teal;
   }
+
   i {
     color: $white;
     font-size: 1.2rem;
