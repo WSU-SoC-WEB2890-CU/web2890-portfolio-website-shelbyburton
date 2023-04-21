@@ -110,7 +110,16 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: 1500px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(sm) {
+    background-size: cover;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-size: cover;
+  }
+
 }
 
  
@@ -265,13 +274,13 @@ p {
 
 //PROJECT & ABOUT ME CARDS
 .card {
-  border-radius: .5rem;
+  border-radius: .5rem; 
 }
 
 //PORTFOLIO 
 .project, .web_1430, .web_2630, .web_2890 {
   p {
-    font-size: 1.4rem; 
+    font-size: 1.2rem; 
   };
 }
 
@@ -358,6 +367,9 @@ p {
     }
   }
 }
+
+
+
 
 //CONTACT
 .contact {
