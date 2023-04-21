@@ -1,0 +1,503 @@
+/* Your styles go here */
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+//COLOR SCHEME
+/*TEAL & BLUE*/
+$teal-dark: #025159;
+$teal: #3e848c;
+$teal-light: #7ab8bf;
+$blue-light: #c4eef2;
+
+/*NEUTRALS*/
+$copper: #a67458;
+$grey-light: #f2f2f2;
+$grey-light-2: #f4f4f4;
+$white: #ffffff;
+$grey: #1a1a1a;
+$grey-dark: #242526;
+$grey-blue: #344665;
+$black: #000000;
+
+//BODY & HEADER TAGS
+body {
+background-color: $white;
+font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4 {
+font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 1.3rem; 
+}
+
+p {
+  font-size: 1.2rem; 
+}
+
+//NAVBAR
+.menu {
+  font-size: 1.4rem;
+  margin-top: 50px; 
+  font-family: 'Raleway', sans-serif;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.3rem;
+  }
+
+  .navbar-toggler-icon {
+    border-color: $grey-light;
+
+    i {
+      color: $copper;
+      font-size: 2.2rem;
+    }
+  }
+
+  .navbar-brand {
+    color: $copper;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-left: 40px;
+  }
+
+  .dropdown-menu {
+    font-size: 1.2rem;
+
+    &:hover {
+      color: $copper;
+    }
+
+    &:active {
+      color: $copper;
+    }
+  }
+
+  .dropdown-menu:hover {
+    color: $copper;
+  }
+
+  li {
+    padding: 0 0.4rem;
+    margin-right: 40px;
+
+    a {
+      color: $black;
+      padding: 0 0.8rem;
+      text-transform: capitalize;
+      font-weight: 600;
+
+      &:hover {
+        color: $copper;
+      }
+
+      &:active {
+        color: $copper;
+      }
+    }
+  }
+}
+
+//HOME & WELCOME
+.intro-section {
+  background: url("../images/portfolio_home_cropped.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1500px;
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(sm) {
+    background-size: cover;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-size: cover;
+  }
+
+}
+
+ 
+//TIMELINE
+#timeline {
+  margin-top: 20px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+  color: #000000;
+}
+
+.timeline-heading {
+  h4 {
+    color: $copper;
+  }
+}
+
+.timeline-body {
+  font-size: 1.2rem;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: $grey-dark;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-badge {
+  background-color: $teal !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+
+//PROJECT & ABOUT ME CARDS
+.card {
+  border-radius: .5rem; 
+}
+
+//PORTFOLIO 
+.project, .web_1430, .web_2630, .web_2890 {
+  p {
+    font-size: 1.2rem; 
+  };
+}
+
+
+//ABOUT ME
+.heading-line::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: $grey-blue;
+}
+
+.heading-line::after {
+  content: "";
+  width: 2rem;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: $grey-blue;
+}
+
+.display-3 {
+  &--title {
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    background-image: linear-gradient(to right, $teal-dark, $teal-light);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.8rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+
+//ABOUT CAROUSEL
+.about {
+  position: relative;
+  padding: 0;
+
+  &__card {
+    padding: 2rem 1.25rem;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+    &__picture {
+      border-radius: 0.5rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__name {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+
+    h3 {
+      padding-top: 0.8rem;
+      text-transform: capitalize;
+    }
+
+    p {
+      padding-bottom: 2rem;
+      text-transform: capitalize;
+      font-size: 1.2rem; 
+    }
+  }
+}
+
+
+
+
+//CONTACT
+.contact {
+  button {
+    background-color: $teal-light;
+    border: none;
+
+    i {
+      font-size: 1.2rem;
+      color: $white;
+      padding: 0 0.4rem;
+    }
+  }
+
+  i {
+    font-size: 1.3rem;
+    color: $grey-blue;
+    padding: 0 0.4rem;
+  }
+
+  .links-list {
+    display: inline;
+    list-style-type: none;
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 500; 
+
+    li {
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: $teal;
+
+      a {
+        color: $grey-dark;
+        text-decoration: none;
+
+        &:hover {
+          color: $copper;
+        }
+      }
+    }
+  }
+}
+
+//FOOTER
+.footer {
+  background-color: $grey-light;
+
+  h5 {
+    color: $grey;
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: $grey-blue;
+    padding: 0 0.4rem;
+  }
+}
+
+.links-list {
+  display: block;
+  list-style-type: none;
+  position: relative;
+  font-size: 1.4rem;
+
+  li {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: $black;
+
+    a {
+      color: $black;
+      text-decoration: none;
+
+      &:hover {
+        color: $copper;
+      }
+    }
+  }
+}
+
+//COPYRIGHT  CONTENT
+.footer-bottom {
+  background-color: $grey-dark;
+  font-size: 1.2rem;
+
+  &__copyright {
+    color: $white;
+    font-weight: 400;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $copper;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//BACK TO TOP BUTTON
+.back-to-top {
+  background-color: $teal-dark;
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+
+  &:hover {
+    background-color: $teal;
+  }
+
+  i {
+    color: $white;
+    font-size: 1.2rem;
+    @include absoluteCenter;
+  }
+}
